@@ -3,9 +3,12 @@
 import random
 
 class Cart:
-    def __init__(self, quantity, barcode):
+    def __init__(self, quantity, id):
         self.quantity = quantity
-        self.barcode = barcode
+        self.id = id
 
-    def barcode(self):
+    def order_id(self, id):
+        pass
+
+    def add_items(self, quantity):
         pass
