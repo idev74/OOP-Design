@@ -7,8 +7,8 @@ class Cart:
         self.quantity = quantity
         self.id = id
 
-    def order_id(self, id):
+    def order_id(self):
         pass
 
-    def add_items(self, quantity):
+    def add_items(self):
         pass
