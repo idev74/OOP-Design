@@ -2,7 +2,7 @@ import random
 from store import Store, store 
 
 class Cart():
-    def __init__(self, quantity, item, id =''):
+    def __init__(self, quantity, item, id = []):
         self.quantity = quantity
         self.item = item
         self.id = id
