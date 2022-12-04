@@ -1,4 +1,5 @@
 # Marty
+# from department import Department
 
 class Product:
     def __init__(self, name, price):
