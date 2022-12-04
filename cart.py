@@ -8,7 +8,11 @@ class Cart:
         self.id = id
 
     def order_id(self):
-        pass
+        item = random.randint(0,9)
+        return item
 
     def add_items(self):
         pass
+
+    def receipt(self):
+        print(f'')
