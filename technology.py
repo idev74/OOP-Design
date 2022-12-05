@@ -9,7 +9,7 @@ class Technology(Store):
         self.stock = stock
 
     """
-    Gives list of random drink if someone spills.
+    Returns a random coffee that the worker may or may not have spilled on the job
     """
 
     def cleaning(self):
