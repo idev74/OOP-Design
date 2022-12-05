@@ -20,7 +20,7 @@ class Cart():
     def receipt(self): # protected; uses unique order_id attribute, but also takes from store
          return f"~ Order {self.order_id} from {store.name} location {self.location_num} is confirmed. Thank you for choosing us! ~"
 
-new_order = Cart(10)
+new_order = Cart(1275)
 print(new_order.get_items())
 new_order.order_num()
 print(new_order.receipt())

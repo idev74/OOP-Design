@@ -1,5 +1,5 @@
 '''
-Product inside the Department
+Products inside the Departments
 '''
 
 import random
@@ -19,22 +19,22 @@ class Product:
 
     def random_item(self): # protected; shared and used with cart only
         groceries = ['Ketchup', 'Bread', 'Rice', 'Soup', 'Milk', 'Chips', 'Beans', 'Sparkling Water', 'Soda', 'Lettuce', 'Grapes', 'Bottled Water']
-        clothes = ['Levi Shorts', 'Tank Top', 'Graphic Tee', 'Leggings', 'Mom Jeans', 'Crew Socks', 'Button Up', 'Pajama Pants', 'Baseball Cap', 'Belt']
-        product_dept = ['groceries', 'clothing'] 
-        chosen = input('Please choose a department (Groceries or Clothing): ').lower()
+        tech = ['Airpods', 'IPhone', 'Macbook Pro', 'Instax Camera', 'Robot Dog', 'Video Game', 'Nintendo Switch', 'PS5', 'Xbox', 'Mechanical Keyboard']
+        product_dept = ['groceries', 'tech'] 
+        chosen = input('Please choose a department (Groceries or Tech): ').lower()
         while chosen in product_dept:
             if chosen == product_dept[0]:
                 item = random.choice(groceries)
                 self.product.append(item)
 
             elif chosen == product_dept[1]:
-                item = random.choice(clothes)
+                item = random.choice(tech)
                 self.product.append(item)
             return f'{self.product} added.'
 
         while chosen not in product_dept:
             return f'Please choose from one of the listed departments.'
         
-prod = Product(3)
+prod = Product()
 print(prod.insert_obj())
 print(prod.random_item())
