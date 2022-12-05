@@ -11,4 +11,7 @@ In addition different classes are created that is inherited from store.
 # How to Use
 To run this code run python3 {filename}.py
 
+# Video Demo Link
+https://youtu.be/dM2_K4U_RNE
+
 *For ACS 1111 (Object Oriented Programming) at Dominican University of California*
