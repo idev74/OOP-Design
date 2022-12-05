@@ -12,9 +12,7 @@ class Product:
         self.product_dept = ['groceries', 'clothing'] 
         self.product = []
 
-
-
-    def _insert_obj(self):
+    def insert_obj(self):
         self.product.append(self.name)
         return self.product
 

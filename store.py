@@ -19,9 +19,9 @@ class Store:
     def get_cart(self):
         cart = input('Do you want a shopping cart? Y/N: ')
         if cart.lower() == 'y':
-            return f'Welcome to {self.name}, {self.employee_name} hands you a cart!'
+            return f'Welcome to {self.name}, {self.employee_name} hands you a cart!\n'
         else:
-            return f'Hi! I am {self.employee_name}. Here is a basket, then? Welcome to {self.name}!'
+            return f'Hi! I am {self.employee_name}. Here is a basket, then? Welcome to {self.name}!\n'
     
     """
     Capacity of the store
@@ -30,9 +30,9 @@ class Store:
         max_capacity = round(int(self.sq_ft) / 36) 
         customers = random.randint(5, max_capacity * 2)
         if customers > max_capacity:
-            return f"Currently, {self.name}'s max capacity is {max_capacity} people ...since we recently got 'sued'.\nYou are going to have to wait in the storage room until some more people leave."
+            return f"Currently, {self.name}'s max capacity is {max_capacity} people ...since we recently got 'sued'.\nYou are going to have to wait in the storage room until some more people leave.\n"
         else:
-             return f"Currently, {self.name}'s max capacity is {max_capacity} people. Let me know if you see {max_capacity + 1}\n...I will take care of them"
+             return f"Currently, {self.name}'s max capacity is {max_capacity} people. Let me know if you see {max_capacity + 1}\n...I will take care of them\n"
 
         
 
