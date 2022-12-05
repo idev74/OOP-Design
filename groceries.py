@@ -1,7 +1,6 @@
 
 from store import Store, store
 import random
-# from product import Product
 
 #Department
 class Groceries(Store):
