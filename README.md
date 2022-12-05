@@ -9,6 +9,6 @@ First we created a class for store that returns the employee name and then it's 
 In addition different classes are created that is inherited from store.
 
 # How to Use
-To run this code run python3 app.py
+To run this code run python3 {filename}.py
 
 *For ACS 1111 (Object Oriented Programming) at Dominican University of California*
