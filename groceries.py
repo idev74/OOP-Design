@@ -1,4 +1,3 @@
-
 from store import Store, store
 import random
 
@@ -9,15 +8,15 @@ class Groceries(Store):
         self.employee_num = employee_num
         self.stock = stock
 
-    
-#  both groceries and clothing are inheriting from the store class
 
     """
-    Need to retrieve and set the store/employee names in order to print a message when initialized.
-    """
-    def get_names(self):
-        return self.name, self.employee_name, self.employee_num
-   
+    Picks a random place for the worker to take a break.
+    """    
+    def on_break(self):
+        room = ['Storage', 'Fitting Room', 'Break Room', 'Bathroom', 'Dollar Section']
+        room = random.choice(room)
+        return f"Man, I can't wait to go to {room} and take my break..."
+
     """
     Introducing the employee name and store name
     """
@@ -33,12 +32,13 @@ class Groceries(Store):
         if customers > max_capacity:
             return f'Out of the {self.employee_num} people working this department, not one of them has told you \nthat this area has a max capacity of {max_capacity} shoppers?! Get in the storage warehouse...\n'
         else:
-                return f"{store.name} {store.name} really prides itself on its grocery department. Almost as much as we\npride ourselves on fire safety! Seriously, only {max_capacity} people allowed in these food aisles.\nLet me know if you spot any rebels.\n"
+            return f"{store.name} grocery really prides itself on its {self.name} department. Almost as much as we\npride ourselves on fire safety! Seriously, only {max_capacity} people allowed in these food aisles.\nLet me know if you spot any rebels.\n"
    
 
         
   
 
 groceries = Groceries('produce', 'Isabella', 1234, 20, 5)
+print(groceries.on_break())
 print(groceries.intro())
 print(groceries.get_capacity())
