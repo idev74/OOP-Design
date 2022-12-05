@@ -1,23 +1,26 @@
 import random
-from store import Store, store 
+from store import store
+from product import prod
 
 class Cart():
-    def __init__(self, quantity, item, id = []):
-        self.quantity = quantity
-        self.item = item
-        self.id = id
+    def __init__(self, location_num, order_id = ['#']):
+        self.location_num = location_num # private; only used in cart
+        self.order_id = order_id # private; only used in cart
 
-    def order_id(self):
+    def get_items(self): # protected; shared between product and cart only
+        order = prod.product
+        return f'Your Items: {order}'
+
+    def order_num(self): # private; uses unique order_id attribute
         for i in range(5):
-            self.id.append(random.randint(0,9))
-            return self.id.join('')
+            self.order_id.append(random.randint(0,9))
+        self.order_id = (''.join(str(num) for num in self.order_id))
+        return self.order_id
 
-    def add_item(self):
-        
-        pass
+    def receipt(self): # protected; uses unique order_id attribute, but also takes from store
+         return f"~ Order {self.order_id} from {store.name} location {self.location_num} is confirmed. Thank you for choosing us! ~"
 
-    def receipt(self):
-        print(f"Here's your order info from {store.name} {self.id}")
-
-hi = Cart(10, 'item')
-hi.receipt()
+new_order = Cart(10)
+print(new_order.get_items())
+new_order.order_num()
+print(new_order.receipt())
